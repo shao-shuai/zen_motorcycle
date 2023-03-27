@@ -25,7 +25,7 @@ export const Navbar: FC = () => {
 
         <a
           className="flex items-center hover:opacity-50"
-          href="https://github.com/mckaywrigley/paul-graham-gpt"
+          href="https://github.com/shao-shuai/zen_motorcycle"
           target="_blank"
           rel="noreferrer"
         >
