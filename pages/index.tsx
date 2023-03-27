@@ -20,7 +20,7 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
-  const [mode, setMode] = useState<"search" | "chat">("chat");
+  const [mode, setMode] = useState<"search" | "chat">("search");
   const [matchCount, setMatchCount] = useState<number>(5);
   const [apiKey, setApiKey] = useState<string>("");
 
