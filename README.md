@@ -1,38 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GPT for Zen and the Art of Motorcycle Maintenance
 
-## Getting Started
+[Zen and the Art of Motorcycle Maintenance](https://en.wikipedia.org/wiki/Zen_and_the_Art_of_Motorcycle_Maintenance) by Robert M. Pirsig is my favorite book in 2022.
 
-First, run the development server:
+With this app, you are able to search the content of the book with natural language.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Dataset
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Zen and the Art of Motorcycle Maintenance](https://archive.org/stream/ZenAndTheArtOfMotorcycleRepair-RobertPirsig/zen-motorcycle_djvu.txt)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## How it works
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The book was split into chunks and each chunk was embedded with [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings) (`text-embedding-ada-002`).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+When user input a question, the question is firsted embedded, then all the chunks are looped over and compare the cosine similarity of the dembedded quesiton and each chunk.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can set up the threshold and the number of returned results.
 
-## Learn More
+## Thanks
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This repo was inspired by [paul-graham-gpt](https://github.com/mckaywrigley/paul-graham-gpt) created by [Mckay Wrigley](https://github.com/mckaywrigley), he also has an awesome video here, [How to create an OpenAI Q&A bot with ChatGPT API + embeddings](https://www.youtube.com/watch?v=RM-v7zoYQo0&t=2412s).

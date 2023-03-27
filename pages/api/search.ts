@@ -6,8 +6,9 @@ export const config = {
 
 const handler = async (req: Request): Promise<Response> => {
   try {
-    const { query } = (await req.json()) as {
+    const { query, matches } = (await req.json()) as {
       query: string;
+      matches: number;
     };
 
     const input = query.replace(/\n/g, " ");
@@ -29,8 +30,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     const { data: chunks, error } = await supabaseAdmin.rpc("zen_search", {
       query_embedding: embedding,
-      similarity_threshold: 0.5,
-      match_count: 5,
+      similarity_threshold: 0.1,
+      match_count: matches,
     });
 
     if (error) {

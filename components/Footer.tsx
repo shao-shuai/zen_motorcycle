@@ -27,26 +27,6 @@ export const Footer: FC = () => {
         </a>
         .
       </div>
-
-      <div className="flex space-x-4">
-        <a
-          className="flex items-center hover:opacity-50"
-          href="https://twitter.com/kentuckeytom"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IconBrandTwitter size={24} />
-        </a>
-
-        <a
-          className="flex items-center hover:opacity-50"
-          href="https://github.com/mckaywrigley/paul-graham-gpt"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IconBrandGithub size={24} />
-        </a>
-      </div>
     </div>
   );
 };

@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# tsx file
+idnex1.tsx
+
+# scripts
+test.ts
