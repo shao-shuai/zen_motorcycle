@@ -1,6 +1,6 @@
 # GPT for Zen and the Art of Motorcycle Maintenance
 
-![](.public/demo.gif)
+![](./public/demo.gif)
 
 [Zen and the Art of Motorcycle Maintenance](https://en.wikipedia.org/wiki/Zen_and_the_Art_of_Motorcycle_Maintenance) by Robert M. Pirsig is my favorite book in 2022.
 
