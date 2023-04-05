@@ -8,7 +8,7 @@ export const Navbar: FC = () => {
       <div className="font-bold text-2xl flex items-center">
         <a
           className="hover:opacity-50"
-          href="https://paul-graham-gpt.vercel.app"
+          href="https://zen-motorcycle.vercel.app/"
         >
           Zen Motor GPT
         </a>
